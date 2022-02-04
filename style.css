@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+button:disabled {
+  opacity: 0.3;
+}
+
+.modal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+.modal-body {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.modal-body form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-body form input {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.modal-body form input,
+.modal-body form button {
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.modal-body form button {
+  border: none;
+  background-color: #ec3040;
+  color: #fff;
+}
+
+.chat {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat .messages {
+  flex-grow: 1;
+  background-image: linear-gradient(to bottom, pink, violet);
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 120px 20px;
+  list-style: none;
+}
+
+.chat .messages .ours {
+  background-color: aquamarine;
+  align-self: flex-end;
+}
+
+.chat .messages .theirs {
+  background-color: darksalmon;
+  align-self: flex-start;
+}
+
+.chat .messages li {
+  padding: 1rem;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.chat .messages li h3 {
+  font-size: 1rem;
+}
+
+.chat .messages li p {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  white-space: break-spaces;
+}
+
+.chat .messages li .time {
+  font-size: 0.75rem;
+}
+
+.chat .form {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.chat .form .inner-wrapper {
+  position: relative;
+  display: flex;
+}
+
+.chat .form textarea {
+  width: 100%;
+  padding: 15px;
+  font-family: inherit;
+  font-size: 1rem;
+  resize: none;
+  border: none;
+}
+
+.chat .form button {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  background-color: #ec3040;
+  color: #fff;
+}
