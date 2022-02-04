@@ -1,6 +1,6 @@
 'use strict';
 let user = {};
-const url = 'ws://server-ws-chat.herokuapp.com';
+const url = 'wss://server-ws-chat.herokuapp.com';
 let messages = document.querySelector('.messages');
 
 const nameInput = document.getElementById('name');
